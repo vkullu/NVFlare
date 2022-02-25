@@ -93,7 +93,7 @@ class TF2ModelPersistor(ModelPersistor):
                 model_learnable = pickle.load(f)
         else:
             self.logger.info(f"Initializing server model")
-            model = utils.get_simple_sequential_model(feature_dim= trainer.feature_dim)
+            model = utils.get_simple_sequential_model(feature_dim= 2000)
             var_dict = {model.get_layer(index=key).name: value for key, value in enumerate(model.get_weights())}
             model_learnable = make_model_learnable(var_dict, dict())
         return model_learnable
