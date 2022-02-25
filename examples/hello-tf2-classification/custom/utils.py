@@ -35,8 +35,8 @@ def load_cancer_dataset(n_samples=10000, test_size=0.25):
 
 def get_simple_sequential_model(feature_dim):
     model = Sequential()
-    model.add(Dense(8, input_dim=feature_dim, name='layer_1', activation='relu', use_bias=False))
-    model.add(Dense(5, name='layer_2', activation='softmax', use_bias=False))
+    model.add(Dense(50, input_dim=feature_dim, name='layer_1', activation='relu', use_bias=False))
+    model.add(Dense(10, name='layer_2', activation='softmax', use_bias=False))
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
