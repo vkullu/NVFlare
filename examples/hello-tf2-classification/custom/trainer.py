@@ -106,15 +106,6 @@ class SimpleTrainer(Executor):
             if np.all(value == 0):
                 ordered_model_weights[key] = prev_weights[key]
 
-        for key in ordered_model_weights:
-            print("ORDER MODEL WEIGHTS: Layer name %s and it's dimension is %r"%(key, len(ordered_model_weights[key])))
-            print("Printing the actual matrix %r"%(ordered_model_weights[key]))
-
-        for key in prev_weights:
-            print("PREVIOUS MODEL WEIGHTS: Layer name %s and it's dimesion is %r"%(key, len(prev_weights[key])))
-            print("Printing the actual matrix %r"%(prev_weights[key]))
-            
-
         # update local model weights with received weights
         self.model.set_weights(list(model_weights.values())) 
 
