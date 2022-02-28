@@ -8,7 +8,7 @@ from keras.layers import Dense
 
 
 
-def load_cancer_dataset(n_samples=10000, test_size=0.25):
+def load_cancer_dataset(n_samples=100000, test_size=0.25):
     """
     Making a simulated dataset to mirror my real use case
     """
@@ -35,8 +35,8 @@ def load_cancer_dataset(n_samples=10000, test_size=0.25):
 
 def get_simple_sequential_model(feature_dim):
     model = Sequential()
-    model.add(Dense(50, input_dim=feature_dim, name='layer_1', activation='relu', use_bias=False))
-    model.add(Dense(10, name='layer_2', activation='softmax', use_bias=False))
+    model.add(Dense(100, input_dim=feature_dim, name='layer_1', activation='relu', use_bias=False))
+    #model.add(Dense(50, name='layer_2', activation='relu', use_bias=False))
+    model.add(Dense(10, name='layer_3', activation='softmax', use_bias=False))
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
-

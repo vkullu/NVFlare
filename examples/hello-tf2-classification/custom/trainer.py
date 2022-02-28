@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import tensorflow as tf
-from IPython import embed
 import numpy as np
 import pandas as pd
 import utils
