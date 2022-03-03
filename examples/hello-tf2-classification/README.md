@@ -1,8 +1,7 @@
-# Hello TensorFlow
+# Classification example using simulated dataset
 
-Example of using [NVIDIA FLARE](https://nvidia.github.io/NVFlare) to train an image classifier using federated averaging ([FedAvg]([FedAvg](https://arxiv.org/abs/1602.05629))) and [TensorFlow](https://tensorflow.org/) as the deep learning training framework.
+Example of using [NVIDIA FLARE](https://nvidia.github.io/NVFlare) to train tabular data classifier using federated averaging ([FedAvg]([FedAvg](https://arxiv.org/abs/1602.05629))) and [TensorFlow](https://tensorflow.org/) as the deep learning training framework.
 
-> **_NOTE:_** This example uses the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset and will load its data within the trainer code.
 
 ### 1. Install NVIDIA FLARE
 
@@ -10,7 +9,7 @@ Follow the [Installation](https://nvidia.github.io/NVFlare/installation.html) in
 Install additional requirements:
 
 ```
-pip3 install torch
+pip3 install tensorflow scikit-learn
 ```
 
 ### 2. Set up your FL workspace
@@ -24,8 +23,8 @@ Then, use these Admin commands to run the experiment:
 
 ```
 set_run_number 1
-upload_app hello-tf2
-deploy_app hello-tf2 all
+upload_app hello-tf2-classification
+deploy_app hello-tf2-classification all
 start_app all
 ```
 
