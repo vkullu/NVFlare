@@ -1,4 +1,4 @@
-# Classification example using simulated tabluar dataset
+# Classification example using simulated tabular dataset
 
 Example of using [NVIDIA FLARE](https://nvidia.github.io/NVFlare) to train tabular data classifier using federated averaging ([FedAvg]([FedAvg](https://arxiv.org/abs/1602.05629))) and [TensorFlow](https://tensorflow.org/) as the deep learning training framework.
 
