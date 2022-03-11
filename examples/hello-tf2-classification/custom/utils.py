@@ -8,7 +8,7 @@ from keras.layers import Dense
 
 
 
-def load_cancer_dataset(n_samples=100000, test_size=0.25):
+def load_cancer_dataset(n_samples=10000, test_size=0.25):
     """
     Making a simulated dataset to mirror my real use case
     """

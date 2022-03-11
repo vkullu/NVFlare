@@ -83,6 +83,8 @@ class SimpleTrainer(Executor):
             a new `Shareable` object to be submitted to server for aggregation.
         """
 
+        self.log_info(fl_ctx, "I came")
+
         # retrieve model weights download from server's shareable
         if abort_signal.triggered:
             return make_reply(ReturnCode.TASK_ABORTED)
@@ -106,7 +108,7 @@ class SimpleTrainer(Executor):
                 ordered_model_weights[key] = prev_weights[key]
 
         # update local model weights with received weights
-        self.model.set_weights(list(model_weights.values())) 
+        self.model.set_weights(list(ordered_model_weights.values())) 
 
 
         # adjust LR or other training time info as needed
